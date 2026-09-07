@@ -42,3 +42,16 @@ def chooseOp(op):
         showDiv(num1,num2)
     elif op==0:
         print("Gracias por usar mi calculadora :D")
+        
+    
+
+def main():
+    while True:
+        op = menu()
+        if op > 0 and op <=4: chooseOp(op)
+        elif op ==(0): break
+        else: print("Opcion no valida, intente de nuevo")    
+        
+        
+
+main()    
