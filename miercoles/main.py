@@ -1,5 +1,6 @@
-import notas 
+import notas
 from colorama import Fore
+
 def greet():
     print(Fore.CYAN + "Bienvenidos a este Programa Evaluador hecho en 10 minutos :v", Fore.RESET)
     print(Fore.BLUE + "Este sistema no te califica como tal, solo evalua tu nota y te dice como clasifica segun el sistema educativo del minet.", Fore.RESET)
@@ -13,24 +14,23 @@ def menu():
     op = int(input("Digite el # de la opcion que desea usar."))
     return op
 
-
 def chooseOp(op):
     if op == 1:
-        notas.amountGrades()
-        nota = notas.readValue()
-        notas.evaluationGrade(nota)
+        notas.evaluationGrade()
     elif op == 2:
         notas.explanation()
     elif op == 0:
         print("Gracias por usar mi calculadora :D")
-        
+
 def main():
     greet()
     while True:
-            op = menu()
-            if op > 0 and op <=2: chooseOp(op)
-            elif op ==(0): break
-            else: print("Opcion no valida, intente de nuevo")  
+        op = menu()
+        if op > 0 and op <= 2:
+            chooseOp(op)
+        elif op == 0:
+            break
+        else:
+            print("Opcion no valida, intente de nuevo")
 
 main()
- 
