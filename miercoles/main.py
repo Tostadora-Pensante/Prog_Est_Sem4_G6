@@ -16,6 +16,7 @@ def menu():
 
 def chooseOp(op):
     if op == 1:
+        notas.amountGrades()
         nota = notas.readValue()
         notas.evaluationGrade(nota)
     elif op == 2:
